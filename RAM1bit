@@ -1,0 +1,41 @@
+// Code your testbench here
+// or browse Examples
+module ram(clk, rst, en,addr, out_en, data_in, data_out, wr_rd);
+  input clk, rst, en, wr_rd;
+  // input [7:0] data_in; 
+  input ['data_width -1:0]  data_in;
+  input['addr_width -1:0] addr;
+  output reg ['data_width -1:0] data_out;
+ output reg out_en;
+  
+  //local variableinteger i;
+  
+  
+  
+  
+  // memory declaration
+  reg ['data_width -1:0] mem ['depth -1:0];
+  
+  
+  always @(posedge clk)
+    if(en) begin
+    
+      if(!rst) begin
+        data_out <= 0;
+        for(i=0;i<=(2**'addr_width);i=i+1) begin      // default value of reg is x
+        
+        
+      end
+      else begin
+        
+        
+        
+        
+      end
+      
+    end
+  else
+    $display("RAM is disabled");
+  
+    
+    endmodule
